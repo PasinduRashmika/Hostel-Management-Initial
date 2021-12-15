@@ -4,6 +4,7 @@ import Facilities from '../Components/Facilities/Facilities';
 import Gallery from '../Components/Gallery/Gallery';
 import Rules from '../Components/Rules/Rules';
 import News from '../Components/News/News';
+import SubWardens from '../Components/SubWardnes/SubWardens';
 
 
 const Home = (props) => {
@@ -11,9 +12,11 @@ const Home = (props) => {
         <div className="container">
          <Cover Cover1text= {props.Covertext} />
          <Facilities />
-         <Gallery />
          <Rules />
+         <Gallery />
          <News />
+         <SubWardens/>
+         
          
         </div>
     );

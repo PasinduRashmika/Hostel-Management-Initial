@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FooterContainer as Footer } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   color: #fff;
@@ -116,3 +115,33 @@ export const FooterPrivacy = styled.div`
 export const FooterTerms = styled.div`
   width: 150px;
 `;
+export const Sec1 = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `;
+export const Sec2 = styled.div`
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+`;
+export const Icon = styled.div`
+        &{
+        font-size: 30px;
+        padding: 10px;
+        cursor: pointer;
+        }
+        &:active{
+            transform: scale(0.8);
+        }
+    `;
+export const HR = styled.hr`
+  width: 100%;
+  height: 2px;
+  background-color: #49483E5e;
+  border: none;
+`
+export const P = styled.p`
+  text-align: center;
+`

@@ -37,7 +37,7 @@ const CoverContent = (props) => {
     `
 
     return ( 
-            <Sec>
+            <Sec data-aos="fade-right">
                 <Divsec>   
                     <H1>{props.text.header}</H1>
                     <HR />

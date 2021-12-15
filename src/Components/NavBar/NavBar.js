@@ -8,7 +8,7 @@ const Navbar = () => {
     `
     const Nav=styled.nav`
         display: flex;
-        position: absolute;
+        position: fixed;
         justify-content: space-between;
         background:#339BFF;
         height: 100px;
@@ -43,7 +43,7 @@ const Navbar = () => {
         font-family: 'PT Sans', sans-serif;
         cursor: pointer;
         position: relative;
-        font-weight:500;
+        font-weight:550;
     }
     &:hover .Ho{
         width: 50%;

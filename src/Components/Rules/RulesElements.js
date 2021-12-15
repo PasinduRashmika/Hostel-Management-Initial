@@ -1,38 +1,32 @@
 import styled from "styled-components";
-import { StructureContainer as Struct } from "react-router-dom";
 
 
 
 export const StructureItems = styled.div`
-  width: 1400px;
-  height: 500px;
   color: #000;
-  flex: 0 1 50%;
-  margin-left:60px;
+  padding-top:3%;
   background:#E5DFFF;
-  padding-top:3px;
-  margin-bottom:30px;
+  margin-bottom: 2%;
 `;
 export const StructureRule = styled.div`
-    left:0;
-    text-align:left;
-    margin-bottom:20px;
-    color:#339BFF;
-    font-size:40px;
-    border-bottom:3px #339BFF solid;
-    
+        letter-spacing:8px;
+        text-align: center;
+        font-size: 40px;
+        color: #339BFF;
+        font-variant: small-caps;
+        font-weight: bold;
+        position: relative;
+        border-bottom: 3px solid #49483E;
+        display: inline;
 `;
 export const StructureDes = styled.div`
   color: #000;
-  background:none;
-  width: 75%;
+  width: 100%;
   height: auto;
   color: #000;
   font-size: 30px;
   font-weight: 600;
-  margin-left:30px;
-  margin-top: 70px;
- 
+  padding-top: 3%;
 `;
 export const StructureDesPara = styled.div`
   color: #000;
@@ -42,10 +36,9 @@ export const StructureDesPara = styled.div`
   color: #000;
   font-size: 15px;
   font-weight: 400;
-  margin-top: 10px;
   font-style: italic;
-  margin-bottom: 20px;
   line-height: 25px;
+  margin: 0 20px ;
 `;
 export const StructureDesVision = styled.div`
   color: #000;
@@ -69,6 +62,7 @@ export const StructureDesVisionDes = styled.div`
   margin-bottom: 20px;
   font-style: italic;
   text-align:left;
+  margin: 20px;
 `;
 export const StructureDesMission = styled.div`
   color: #000;
@@ -92,6 +86,7 @@ export const StructureDesMissionDes = styled.div`
   font-size: 15px;
   font-weight: 600;
   text-align:left;
+  margin: 20px;
 `;
 export const StructureImgContainer = styled.div`
   color: #bbb;
@@ -109,13 +104,15 @@ export const StructureImgContainer = styled.div`
     color: #339BFF;
     font-size: 20px;
     letter-spacing: 5px;
-    margin-top:50px;
-    margin-left:100px;
+    margin: 30px 10px;
+    position: relative;
+    left: -7.5%;
   }
   button:hover{
       background: #339BFF;
       color:#fff;
       transition: all 0.8s;
+      cursor: pointer;
   }
   
 `;

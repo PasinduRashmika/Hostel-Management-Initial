@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import CountUp from 'react-countup';
+import { useState,useEffect } from "react";
 const Facilities = () => {
     const Div = styled.div`
         display: flex;
@@ -18,13 +19,7 @@ const Facilities = () => {
         position: relative;
         left: 0;
         display: inline;
-    `
-    const HR = styled.h1`
-        width:100px;
-        height:3px;
-        background: #49483E;
-        position:relative;
-        margin-left:44%
+        border-bottom: 3px solid #49483E;
     `
     const MainSubSec = styled.div`
         display: flex;
@@ -39,14 +34,7 @@ const Facilities = () => {
     const SubSec = styled.div`
         margin: 15px;
     `
-    const Icon = styled.div`
-        font-size: 80px;
-        margin: 10px 10px 45px 10px;
-        color: #FFA000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    `
+    
     const H2 = styled.h2`
         margin: 10px 10px 20px 10px;
         font-size:50px;
@@ -73,11 +61,21 @@ const Facilities = () => {
         position:relative;
         //margin-left:44%
     `
+    const[ScrollToTop,setScrollToTop] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset > 500){
+                setScrollToTop(true);
+            }
+            else{
+                setScrollToTop(false)
+            }
+        })
+    }, []);
     return ( 
         <Div>
             <Sec>
                 <H1>Hostel Facilities</H1>
-                <HR />
             </Sec>
             <Sec>
                 <P1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias.</P1>
@@ -85,24 +83,15 @@ const Facilities = () => {
             <Sec>
                 <MainSubSec>
                 <SubSec>
-                    <Icon>
-                       
-                    </Icon>
-                    <H2>10</H2>
+                    <H2>{ScrollToTop && <CountUp end={10} duration={1}/> }</H2>
                     <P>Faculties</P>
                 </SubSec>
                 <SubSec>
-                    <Icon>
-                        
-                    </Icon>
-                    <H2>6547</H2>
+                    <H2>{ScrollToTop && <CountUp end={6547} duration={1}/> }</H2>
                     <P>Students</P>
                 </SubSec>
                 <SubSec>
-                    <Icon>
-                        
-                    </Icon>
-                    <H2>15</H2>
+                    <H2>{ScrollToTop && <CountUp end={15} duration={1}/> }</H2>
                     <P>Sub-Wordens</P>
                 </SubSec>
                 </MainSubSec>
